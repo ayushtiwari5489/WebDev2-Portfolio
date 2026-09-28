@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Tiwari - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left" style="font-weight: 600; font-size: 24px;">Ayush Tiwari</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#projects">My Work</a></li>
+                    <li><a href="#experience">Experiences</a></li>
+                    <li><a href="#contact">Get In Touch</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" >
+            <div class="leftsection"><script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const words = [
+        "Web Developer",
+        "Programmer",
+        "Graphic Designer",
+        "Video Editor",
+        "AI/ML Enthusiast"
+    ];
+
+    const typingElement = document.getElementById("typing");
+
+    let wordIndex = 0;
+    let letterIndex = 0;
+    let deleting = false;
+
+    function type() {
+
+        const currentWord = words[wordIndex];
+
+        if (!deleting) {
+            typingElement.textContent =
+                currentWord.substring(0, letterIndex + 1);
+
+            letterIndex++;
+
+            if (letterIndex === currentWord.length) {
+                deleting = true;
+
+                setTimeout(type, 1500);
+                return;
+            }
+
+        } else {
+
+            typingElement.textContent =
+                currentWord.substring(0, letterIndex - 1);
+
+            letterIndex--;
+
+            if (letterIndex === 0) {
+                deleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+            }
+        }
+
+        setTimeout(type, deleting ? 50 : 100);
+    }
+
+    type();
+
+});
+</script>
+                <div class="hero-text">
+    <h1>Hi, I'm Ayush Tiwari</h1>
+
+    <h2>
+        I'm a <span id="typing"></span><span class="cursor">|</span>
+    </h2>
+
+    <p>
+        First-year B.Tech student passionate about technology,
+        development and creative work.
+    </p>
+</div></div>
+            
+            <div class="hero-right">
+    <div class="terminal-card">
+
+        <div class="terminal-top">
+            <div class="terminal-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <span class="terminal-title">ayush@portfolio:~</span>
+        </div>
+
+        <div class="terminal-body">
+
+            <p>
+                <span class="green">➜</span>
+                <span class="white"> whoami</span>
+            </p>
+
+            <h3>Ayush Tiwari</h3>
+
+            <p>
+                <span class="green">➜</span>
+                <span class="white"> role</span>
+            </p>
+
+            <div class="role">
+                <span id="typing-role"></span><span class="cursor">|</span>
+            </div>
+
+            <p>
+                <span class="green">➜</span>
+                <span class="white"> skills</span>
+            </p>
+
+            <div class="skills">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>Git</span>
+                <span>AI/ML</span>
+                <span>Graphic Design</span>
+                <span>Video Editing</span>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                Currently building : "SafeDrill : Disaster Preparedness Platform"
+            </div>
+
+        </div>
+    </div>
+    <script>
+
+const roles = [
+    "Web Developer",
+    "Programmer",
+    "Graphic Designer",
+    "Video Editor",
+    "AI/ML Learner"
+];
+
+const typingElement = document.getElementById("typing-role");
+
+let roleIndex = 0;
+let charIndex = 0;
+
+let deleting = false;
+
+function typeRole() {
+
+    const currentRole = roles[roleIndex];
+
+    if (!deleting) {
+
+        typingElement.textContent =
+            currentRole.substring(0, charIndex + 1);
+
+        charIndex++;
+
+        if (charIndex === currentRole.length) {
+
+            deleting = true;
+
+            setTimeout(typeRole, 1500);
+
+            return;
+        }
+
+    } else {
+
+        typingElement.textContent =
+            currentRole.substring(0, charIndex - 1);
+
+        charIndex--;
+
+        if (charIndex === 0) {
+
+            deleting = false;
+
+            roleIndex++;
+
+            if (roleIndex >= roles.length) {
+                roleIndex = 0;
+            }
+        }
+    }
+
+    setTimeout(
+        typeRole,
+        deleting ? 50 : 100
+    );
+}
+
+typeRole();
+
+</script>
+</div>    
+        </section>
+<section class="projects-section" id="projects">
+
+    <div class="projects-heading">
+        <span>MY WORK</span>
+        <h2>Projects I've Built</h2>
+        <p>
+            A collection of projects where I turn ideas into
+            real-world experiences.
+        </p>
+    </div>
+
+
+    <div class="projects-container">
+
+        <!-- PROJECT 1 -->
+
+        <div class="project-card">
+
+            <div class="project-image">
+
+                <img 
+                    src="safedrill.png"
+                    alt="SafeDrill Project"
+                >
+
+                <div class="project-overlay">
+                    <a href="https://safedrill.in" class="view-project">
+                        View Project ↗
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="project-content">
+
+                <div class="project-number">
+                    01
+                </div>
+
+                <h3>SafeDrill</h3>
+
+                <p>
+                    An interactive disaster preparedness platform
+                    designed to help users learn and practice
+                    emergency response through realistic scenarios.
+                </p>
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>AI</span>
+                </div>
+
+                <a href="https://safedrill.in" class="project-link">
+                    Try It Out
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 2 -->
+
+        <div class="project-card">
+
+            <div class="project-image">
+
+                <img 
+                    src="designs.jpg"
+                    alt="Portfolio Website"
+                >
+
+                <div class="project-overlay">
+                    <a href="#" class="view-project">
+                        View Project ↗
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="project-content">
+
+                <div class="project-number">
+                    02
+                </div>
+
+                <h3>My Designs</h3>
+
+                <p>
+                    A showcase of my creative work, including
+                    graphic design, video editing, and other
+                    multimedia projects.
+                </p>
+
+                <div class="project-tech">
+                    <span>Posters</span>
+                    <span>PPT's</span>
+                    <span>Logos</span>
+                    <span>Videos</span>
+                </div>
+
+                <a href="#" class="project-link">
+                    Explore Project
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+
+const revealElements = document.querySelectorAll(
+    ".project-card, .projects-heading"
+);
+
+const revealObserver = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+
+revealElements.forEach(element => {
+
+    revealObserver.observe(element);
+
+});
+
+</script>
+<script>
+
+const cards = document.querySelectorAll(".project-card");
+
+cards.forEach(card => {
+
+    card.addEventListener("mousemove", (e) => {
+
+        const rect = card.getBoundingClientRect();
+
+        const x =
+            e.clientX - rect.left;
+
+        const y =
+            e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX =
+            ((y - centerY) / centerY) * -3;
+
+        const rotateY =
+            ((x - centerX) / centerX) * 3;
+
+        card.style.transform =
+            `translateY(-12px)
+             rotateX(${rotateX}deg)
+             rotateY(${rotateY}deg)`;
+
+    });
+
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform =
+            "translateY(0) rotateX(0) rotateY(0)";
+
+    });
+
+});
+
+</script>
+
+</section>
+<section class="experience-section" id="experience">
+
+    <div class="experience-heading">
+        <span>Experiences</span>
+        <h2>Experience & Milestones</h2>
+        <p>
+            Experiences that have challenged me, taught me,
+            and pushed me to keep learning.
+        </p>
+    </div>
+
+
+    <div class="experience-timeline">
+
+
+        <!-- EXPERIENCE 01 -->
+
+        <div class="experience-item">
+
+            <div class="experience-dot">
+                01
+            </div>
+
+            <div class="experience-card">
+
+                <div class="experience-top">
+
+                    <span class="experience-type">
+                        HACKATHON
+                    </span>
+
+                    <span class="experience-date">
+                        2026
+                    </span>
+
+                </div>
+
+                <h3>Build With Bharat 2.0</h3>
+
+                <h4>Hackathon Participant · Finalist</h4>
+
+                <p>
+                    Participated in Build With Bharat 2.0 at
+                    NIT Delhi and worked on SafeDrill, a disaster
+                    preparedness platform designed to help people
+                    learn and practice emergency response.
+                </p>
+
+                <div class="experience-tags">
+
+                    <span>Web Development</span>
+                    <span>AI</span>
+                    <span>Problem Solving</span>
+                    <span>Teamwork</span>
+
+                </div>
+
+                <div class="experience-highlight">
+                    <span class="highlight-icon">✦</span>
+
+                    Stayed through the night during the hackathon
+                    and reached the finals among 25 shortlisted teams.
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EXPERIENCE 02 -->
+
+        <div class="experience-item">
+
+            <div class="experience-dot">
+                02
+            </div>
+
+            <div class="experience-card">
+
+                <div class="experience-top">
+
+                    <span class="experience-type">
+                        LEADERSHIP EXPERIENCE
+                    </span>
+
+                    <span class="experience-date">
+                        2026
+                    </span>
+
+                </div>
+
+                <h3>SSB Experience</h3>
+
+                <h4>SSB Candidate</h4>
+
+                <p>
+                    Appeared for the Services Selection Board
+                    selection process. The experience exposed me
+                    to leadership, teamwork, communication,
+                    decision-making and performing under pressure.
+                </p>
+
+                <div class="experience-tags">
+
+                    <span>Leadership</span>
+                    <span>Teamwork</span>
+                    <span>Communication</span>
+                    <span>Discipline</span>
+
+                </div>
+
+                <div class="experience-highlight">
+                    <span class="highlight-icon">✦</span>
+
+                    A challenging experience that helped me
+                    understand my strengths and areas for growth.
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EXPERIENCE 03 -->
+
+        <div class="experience-item">
+
+            <div class="experience-dot active">
+                03
+            </div>
+
+            <div class="experience-card current">
+
+                <div class="experience-top">
+
+                    <span class="experience-type">
+                        CURRENTLY ACTIVE
+                    </span>
+
+                    <span class="experience-date">
+                        2026 — Present
+                    </span>
+
+                </div>
+
+                <h3>ALCOM Alumni Committee</h3>
+
+                <h4>Team Member · Graphics Team</h4>
+
+                <p>
+                    Currently contributing as a team member of the
+                    ALCOM Alumni Committee, working with the team
+                    and exploring creative and technical ways to
+                    contribute to the community.
+                </p>
+
+                <div class="experience-tags">
+
+                    <span>Creative Design</span>
+                    <span>Team Collaboration</span>
+                    <span>Communication</span>
+                    <span>Community</span>
+
+                </div>
+
+                <div class="experience-highlight current-status">
+
+                    <span class="live-dot"></span>
+
+                    Currently contributing & learning
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+<script>
+
+const experienceSection =
+    document.querySelector(".experience-section");
+
+const experienceTimeline =
+    document.querySelector(".experience-timeline");
+
+const experienceItems =
+    document.querySelectorAll(".experience-item");
+
+const experienceHeading =
+    document.querySelector(".experience-heading");
+
+
+const experienceObserver =
+    new IntersectionObserver(
+
+        (entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    experienceHeading.classList.add("show");
+
+                    experienceTimeline.classList.add("active");
+
+                    experienceItems.forEach((item, index) => {
+
+                        setTimeout(() => {
+
+                            item.classList.add("show");
+
+                        }, index * 180);
+
+                    });
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.15
+        }
+
+    );
+
+
+experienceObserver.observe(experienceSection);
+
+</script>
+</section>
+<section class="contact-section" id="contact">
+
+    <div class="contact-glow glow-one"></div>
+    <div class="contact-glow glow-two"></div>
+
+    <div class="contact-container">
+
+        <!-- Heading -->
+
+        <div class="contact-heading">
+
+            <span class="contact-label">GET IN TOUCH</span>
+
+            <h2>
+                Let's build something
+                <span>together.</span>
+            </h2>
+
+            <p>
+                Whether it's a project, collaboration, creative idea,
+                or just a conversation about technology — feel free
+                to reach out.
+            </p>
+
+        </div>
+
+
+        <!-- CONTACT CARDS -->
+
+        <div class="contact-grid">
+
+
+            <!-- EMAIL -->
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ayushtiwari5489@gmail.com"
+   class="contact-card"
+   target="_blank"
+   rel="noopener noreferrer">
+
+    <div class="contact-icon">
+        <i class="fa-solid fa-envelope"></i>
+    </div>
+
+    <div class="contact-info">
+        <span>Email</span>
+        <h3>ayushtiwari5489@gmail.com</h3>
+    </div>
+
+    <div class="contact-arrow">↗</div>
+</a>
+
+            <!-- PHONE -->
+
+            <a href="tel:+919315153175"
+               class="contact-card">
+
+                <div class="contact-icon">
+                    ☎
+                </div>
+
+                <div class="contact-info">
+
+                    <span>Phone</span>
+
+                    <h3>
+                        +91 93151 53175
+                    </h3>
+
+                </div>
+
+                <div class="contact-arrow">
+                    ↗
+                </div>
+
+            </a>
+
+
+            <!-- LINKEDIN -->
+
+            <a href="https://www.linkedin.com/in/ayushtiwari5489/"
+               class="contact-card"
+               target="_blank"
+               rel="noopener">
+
+                <div class="contact-icon">
+                    in
+                </div>
+
+                <div class="contact-info">
+
+                    <span>LinkedIn</span>
+
+                    <h3>
+                        Ayush Tiwari
+                    </h3>
+
+                </div>
+
+                <div class="contact-arrow">
+                    ↗
+                </div>
+
+            </a>
+
+
+            <!-- GITHUB -->
+
+            <a href="https://github.com/ayushtiwari5489"
+               class="contact-card"
+               target="_blank"
+               rel="noopener">
+
+                <div class="contact-icon">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+
+                <div class="contact-info">
+
+                    <span>GitHub</span>
+
+                    <h3>
+                        @ayushtiwari5489
+                    </h3>
+
+                </div>
+
+                <div class="contact-arrow">
+                    ↗
+                </div>
+
+            </a>
+
+
+            <!-- INSTAGRAM -->
+
+            <a href="https://www.instagram.com/its_ayush_110/"
+               class="contact-card"
+               target="_blank"
+               rel="noopener">
+
+                <div class="contact-icon">
+    <i class="fa-brands fa-instagram"></i>
+</div>
+
+                <div class="contact-info">
+
+                    <span>Instagram</span>
+
+                    <h3>
+                        @its_ayush_110
+                    </h3>
+
+                </div>
+
+                <div class="contact-arrow">
+                    ↗
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <!-- CTA -->
+
+        <div class="contact-cta">
+
+            <span>Have an idea?</span>
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ayushtiwari5489@gmail.com"
+   target="_blank"
+   rel="noopener noreferrer">
+                Let's talk
+                <span>↗</span>
+            </a>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="contact-footer">
+
+            <p>
+                © 2026 Ayush Tiwari. Built with curiosity & code.
+            </p>
+
+            <p>
+                Designed & Developed by Ayush Tiwari
+            </p>
+
+        </div>
+
+    </div>
+<script>
+
+const contactSection =
+    document.querySelector(".contact-section");
+
+const contactHeading =
+    document.querySelector(".contact-heading");
+
+const contactCards =
+    document.querySelectorAll(".contact-card");
+
+
+const contactObserver =
+    new IntersectionObserver(
+
+        (entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    contactHeading.classList.add("show");
+
+
+                    contactCards.forEach((card, index) => {
+
+                        setTimeout(() => {
+
+                            card.classList.add("show");
+
+                        }, index * 120);
+
+                    });
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.15
+        }
+
+    );
+
+
+contactObserver.observe(contactSection);
+
+</script>
+</section>
+    </main>
+    
+</body>
+</html>
